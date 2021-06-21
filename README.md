@@ -7,7 +7,7 @@ Full Repository: https://github.com/d-trecker/tech-zone.git</br>
 Get the repository by: $ git clone git@github.com:d-trecker/tech-zone.git </br>
 
 
-How to Set Up / Use</br>
+How to Set Up / Use Locally</br>
 - Clone repo by using $ git clone git@github.com:d-trecker/tech-zone.git
 - Install respected proper NPM packages by using the command 'npm install' in root directory. 
 - Create a '.env' in the root directory.
