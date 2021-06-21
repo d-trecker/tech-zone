@@ -1,0 +1,30 @@
+{
+  "name": "tech-zone",
+  "version": "1.0.0",
+  "description": "Title: Tech-Zone</br> Student: Dylan Trecker</br> Description: A CMS-style blog site.</br> Full Repository: https://github.com/d-trecker/tech-zone.git</br> Get the repository by: $ git clone git@github.com:d-trecker/tech-zone.git </br>",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/d-trecker/tech-zone.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/d-trecker/tech-zone/issues"
+  },
+  "homepage": "https://github.com/d-trecker/tech-zone#readme",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "connect-session-sequelize": "^7.1.1",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "express-handlebars": "^5.3.2",
+    "express-session": "^1.17.2",
+    "mysql2": "^2.2.5",
+    "sequelize": "^6.6.2"
+  }
+}
