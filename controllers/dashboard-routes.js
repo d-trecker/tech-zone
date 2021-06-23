@@ -2,6 +2,7 @@ const router = require("express").Router();
 const withAuth = require('../utils/auth');
 const { Post, User, Comment } = require("../models");
 
+//----Get Post route for daashboard----
 router.get("/", withAuth, (req, res) => {
   Post.findAll({
     where: {
@@ -40,6 +41,7 @@ router.get("/", withAuth, (req, res) => {
     });
 });
 
+//----Edit Post route for dashboard----
 router.get('/edit/:id', withAuth, (req, res) => {
   Post.findByPk(req.params.id, {
     attributes: [

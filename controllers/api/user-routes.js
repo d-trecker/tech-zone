@@ -70,9 +70,10 @@ router.post("/", (req, res) => {
   });
 });
 
-
+//----User login route----
 router.post("/login", (req, res) => {
   User.findOne({
+    //--Checks User Email--
     where: {
       email: req.body.email,
     },
@@ -83,12 +84,12 @@ router.post("/login", (req, res) => {
     }
 
     const validPassword = dbUserData.checkPassword(req.body.password);
-
+    //--Checks User Password--
     if (!validPassword) {
       res.status(400).json({ message: "Incorrect password!" });
       return;
     }
-
+    //--Starts session if above validated--
     req.session.save(() => {
       req.session.user_id = dbUserData.id;
       req.session.username = dbUserData.username;
@@ -99,7 +100,7 @@ router.post("/login", (req, res) => {
   });
 });
 
-//Update User route
+//----Update User route-----
 router.put("/:id", (req, res) => {
   User.update(req.body, {
     individualHooks: true,
@@ -120,7 +121,7 @@ router.put("/:id", (req, res) => {
     });
 });
 
-//Delete User route
+//----Delete User route----
 router.delete("/:id", (req, res) => {
   User.destroy({
     where: {
@@ -140,6 +141,7 @@ router.delete("/:id", (req, res) => {
     });
 });
 
+//----Logout route----
 router.post('/logout', (req, res) => {
 if (req.session.loggedIn) {
   req.session.destroy(() => {
