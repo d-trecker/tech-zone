@@ -41,7 +41,7 @@ router.get("/", withAuth, (req, res) => {
     });
 });
 
-//----Edit Post route for dashboard----
+//----Get Post route for dashboard----
 router.get('/edit/:id', withAuth, (req, res) => {
   Post.findByPk(req.params.id, {
     attributes: [
