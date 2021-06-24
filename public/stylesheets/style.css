@@ -146,6 +146,13 @@ main {
   width: auto;
 }
 
+#singup-link {
+  color: #04deff;
+}
+
+
+
+/*---Post CSS ---- */
 li::marker {
   color: #39a2db;
 }
@@ -155,7 +162,6 @@ li::marker {
   text-decoration: underline;
 }
 
-/*---Post CSS ---- */
 #post-create {
   padding-bottom: 4px;
   border-bottom: 2px solid #39a2db;
@@ -212,6 +218,8 @@ div.title {
   border-radius: 10px;
   padding-left: 20px;
   padding-right: 20px;
+  padding-top: 10px;
+  
 }
 
 .edit-link {
@@ -228,6 +236,15 @@ a.edit-link {
   position: relative;
   color: #39a2db;
   /* width: 15%; */
+}
+
+#back-dash {
+  color: #04deff;
+  font-size: .8rem;
+}
+
+#comment-link {
+  color: #04deff;
 }
 
 /*---Comment CSS---*/
