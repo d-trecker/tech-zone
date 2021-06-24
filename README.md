@@ -5,7 +5,7 @@ Student: Dylan Trecker</br>
 Description: A CMS-style tech blog site.</br>
 Full Repository: https://github.com/d-trecker/tech-zone.git</br>
 Get the repository by: $ git clone git@github.com:d-trecker/tech-zone.git </br>
-Heroku: </br>
+Heroku: https://tech-z4.herokuapp.com/ </br>
 
 How to Set Up / Use Locally</br>
 - Clone repo by using $ git clone git@github.com:d-trecker/tech-zone.git
@@ -15,7 +15,7 @@ How to Set Up / Use Locally</br>
 - In MYSQL, run source db/schema.sql and USE tech_zone
 - Start server by using 'npm start' command in root terminal. 
 
-OR! visit the application on Heroku at: 
+OR! visit the application on Heroku at: https://tech-z4.herokuapp.com/
 
 User Story </br>
 AS A developer who writes about tech
