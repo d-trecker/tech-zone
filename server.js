@@ -8,12 +8,19 @@ const hbs = exphbs.create({ helpers });
 const session = require('express-session');
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
+
 const app = express();
 const PORT = process.env.PORT || 3001;
 
 const sess = {
   secret: 'Super super secret',
-  cookie: {},
+  cookie: {
+    httpOnly: true,
+    //Session expires in one hour.
+    maxAge: 3600000,
+  },
+  //resests maxAge with rolling to keep user logged in.
+  rolling: true, 
   resave: false,
   saveUninitialized: true,
   store: new SequelizeStore({
@@ -27,7 +34,6 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
 app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
-
 
 // turn on routes
 app.use(routes);
